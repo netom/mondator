@@ -1,6 +1,6 @@
 # Mondator
 
-[![Build Status](https://secure.travis-ci.org/mandango/mondator.png)](http://travis-ci.org/mandango/mondator)
+[![Build Status](https://secure.travis-ci.org/netom/mondator.png)](http://travis-ci.org/netom/mondator)
 
 Mondator is an easy and flexible class generator for PHP.
 
