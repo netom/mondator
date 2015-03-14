@@ -1,10 +1,14 @@
 {
-    "name": "mandango/mondator",
+    "name": "netom/mondator",
     "description": "Easy and flexible class generator for PHP",
     "keywords": ["class-generator"],
     "type": "library",
     "license": "MIT",
     "authors": [
+        {
+            "name": "Fábián Tamás László",
+            "email": "giganetom@gmail.com"
+        },
         {
             "name":  "Pablo Díez",
             "email": "pablodip@gmail.com"
