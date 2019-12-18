@@ -13,7 +13,7 @@ namespace Mandango\Mondator\Tests\Definition;
 
 use Mandango\Mondator\Definition\Method;
 
-class MethodTest extends \PHPUnit_Framework_TestCase
+class MethodTest extends \PHPUnit\Framework\TestCase
 {
     public function testConstructor()
     {

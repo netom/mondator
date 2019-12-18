@@ -16,7 +16,7 @@ use Mandango\Mondator\Output;
 use Mandango\Mondator\Definition;
 use Mandango\Mondator\Container;
 
-class NamespaceSeparatorOutputFixerExtensionTest extends \PHPUnit_Framework_TestCase
+class NamespaceSeparatorOutputFixerExtensionTest extends \PHPUnit\Framework\TestCase
 {
     public function testFixesOutputForFullClass()
     {

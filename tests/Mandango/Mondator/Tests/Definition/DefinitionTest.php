@@ -15,7 +15,7 @@ use Mandango\Mondator\Definition\Definition;
 use Mandango\Mondator\Definition\Method;
 use Mandango\Mondator\Definition\Property;
 
-class DefinitionTest extends \PHPUnit_Framework_TestCase
+class DefinitionTest extends \PHPUnit\Framework\TestCase
 {
     public function testConstructor()
     {
@@ -114,20 +114,16 @@ class DefinitionTest extends \PHPUnit_Framework_TestCase
         $this->assertTrue($definition->hasPropertyByName('property4'));
     }
 
-    /**
-     * @expectedException \InvalidArgumentException
-     */
     public function testGetPropertyByNameNotExists()
     {
+        $this->expectException(\InvalidArgumentException::class);
         $definition = new Definition('Class1');
         $definition->getPropertyByName('propertyName');
     }
 
-    /**
-     * @expectedException \InvalidArgumentException
-     */
     public function testRemovePropertyByNameNotExists()
     {
+        $this->expectException(\InvalidArgumentException::class);
         $definition = new Definition('Class1');
         $definition->removePropertyByName('propertyName');
     }
@@ -169,20 +165,16 @@ class DefinitionTest extends \PHPUnit_Framework_TestCase
         $this->assertTrue($definition->hasMethodByName('method4'));
     }
 
-    /**
-     * @expectedException \InvalidArgumentException
-     */
     public function testGetMethodByNameNotExists()
     {
+        $this->expectException(\InvalidArgumentException::class);
         $definition = new Definition('Class1');
         $definition->getMethodByName('methodName');
     }
 
-    /**
-     * @expectedException \InvalidArgumentException
-     */
     public function testRemoveMethodByNameNotExists()
     {
+        $this->expectException(\InvalidArgumentException::class);
         $definition = new Definition('Class1');
         $definition->removeMethodByName('methodName');
     }
