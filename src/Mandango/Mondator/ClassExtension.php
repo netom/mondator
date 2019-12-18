@@ -403,7 +403,15 @@ abstract class ClassExtension
                 throw new \RuntimeException('Twig is required to use templates.');
             }
 
-            $twig = new \Twig\Environment(new \Twig\Loader\ArrayLoader([]));
+            $twig = new \Twig\Environment(
+                new \Twig\Loader\ArrayLoader([]),
+                [   
+                    'autoescape'       => false,
+                    'strict_variables' => true,
+                    'debug'            => true,
+                    'cache'            => $this->twigTempDir = sys_get_temp_dir().'/'.uniqid('mondator_')
+                ]
+            );
 
             $this->configureTwig($twig);
 
