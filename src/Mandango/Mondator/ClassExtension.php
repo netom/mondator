@@ -399,11 +399,11 @@ abstract class ClassExtension
     public function getTwig()
     {
         if (null === $this->twig) {
-            if (!class_exists('Twig_Environment')) {
+            if (!class_exists('\\Twig\\Environment')) {
                 throw new \RuntimeException('Twig is required to use templates.');
             }
 
-            $twig = new \Twig_Environment(new \Twig_Loader_Array([]));
+            $twig = new \Twig\Environment(new \Twig\Loader\ArrayLoader([]));
 
             $this->configureTwig($twig);
 
@@ -413,7 +413,7 @@ abstract class ClassExtension
         return $this->twig;
     }
 
-    protected function configureTwig(\Twig_Environment $twig)
+    protected function configureTwig(\Twig\Environment $twig)
     {
     }
 
